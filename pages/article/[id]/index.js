@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Meta from "@/components/Meta";
 
 function article({ article }) {
   // const router = useRouter()
@@ -7,6 +8,7 @@ function article({ article }) {
 
   return (
     <>
+    <Meta title={article.title} description={article.body} />
       <h1>{article.title}</h1>
       <p>{article.body}</p>
       <br />
